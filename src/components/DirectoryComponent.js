@@ -1,41 +1,52 @@
 import React, { Component } from "react";
+import {
+  Card,
+  CardImg,
+  CardImgOverlay,
+  CardText,
+  CardBody,
+  CardTitle,
+} from "reactstrap";
 
 class Directory extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      locations: [
-        {
-          id: 0,
-          name: "The Bean Coffee House Of Mesilla",
-          images: "/assets/images/TheBeanStoreFront.jpeg",
-          featured: true,
-          address: "2011 Avenida de Mesilla, Las Cruces, NM 88005",
-        },
-        {
-          id: 1,
-          name: "The Bean Cafe at the old gate",
-          images: "/assets/images/josefinaOldGate.jpeg",
-          features: false,
-          address: "2261 Calle De Guadalupe, Mesilla, NM 88046",
-        },
-      ],
-    };
-  }
-  render() {
-    const directory = this.state.locations.map((location) => {
+  renderSelectedLocation(location) {
+    if (location) {
       return (
-        <div key={location.id} className="col mt-5">
-          <img src={location.images} />
-          <h2>{location.name}</h2>
-          <p>{location.address}</p>
+        <Card>
+          <CardBody>
+            <CardTitle>{location.name}</CardTitle>
+            <CardText>
+              {location.address}
+              <br />
+              {location.description}
+            </CardText>
+          </CardBody>
+        </Card>
+      );
+    }
+    return <div />;
+  }
+
+  render() {
+    const directory = this.props.locations.map((location) => {
+      return (
+        <div key={location.id} className="col mt-5 md-5">
+          <Card onClick={() => this.onLocationSelect(location)}>
+            <CardImg width="100%" src={location.images} alt={location.name} />
+            <CardImgOverlay>
+              <CardTitle>{location.name}</CardTitle>
+            </CardImgOverlay>
+          </Card>
         </div>
       );
     });
 
     return (
       <div className="container">
-        <div className="row">{directory}</div>
+        <div className="row">
+          {directory}
+          <div className="col"></div>
+        </div>
       </div>
     );
   }

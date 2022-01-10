@@ -1,9 +1,43 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to right, #fefae0, #dda15e, #fefae0);
 }
+
+.body {
+  font-family: "Anton", sans-serif;
+}
+
+.card-title {
+  font: 500 1.25rem "Anton", cursive;
+}
+
+.card-img-overlay .card-title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-image: linear-gradient(#606c38, #fefae0);
+  padding: 20px 0;
+}
+
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  background-image: linear-gradient(to right, #283618, #fefae0);
   color: white;
+}
+
+.jumbotron h2 {
+  color: #606c38;
+}
+
+.navbar-dark {
+  background-color: #fefae0;
 }
