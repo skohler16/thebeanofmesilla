@@ -32,13 +32,17 @@ class Header extends Component {
           <div className="container">
             <div className="row">
               <div className="col">
-                <h1>The Bean</h1>
-                <h2>caffeinated like a local</h2>
+                <img
+                  src="/assets/images/The_Bean_of_Mesilla.png"
+                  height="200"
+                  width="200"
+                  alt="The Bean Logo"
+                />
               </div>
             </div>
           </div>
         </Jumbotron>
-        <Navbar dark sticky="top" expand="md">
+        <Navbar sticky="top" expand="md">
           <div className="container">
             <NavbarBrand className="mr-auto" href="/">
               <img
@@ -51,13 +55,13 @@ class Header extends Component {
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
-                {/* <NavItem>
+                <NavItem>
                   <NavLink className="nav-link" to="/home">
                     <i className="fa fa-home fa-lg" /> Home
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/directory">
                     <i className="fa fa-list fa-lg" /> Locations
                   </NavLink>
                 </NavItem>
@@ -70,7 +74,7 @@ class Header extends Component {
                   <NavLink className="nav-link" to="/">
                     <i className="fa fa-address.card fa-lg" /> Contact Us
                   </NavLink>
-                </NavItem> */}
+                </NavItem>
               </Nav>
             </Collapse>
           </div>

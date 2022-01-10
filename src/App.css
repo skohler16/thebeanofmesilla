@@ -25,6 +25,7 @@
 .site-footer {
   background-image: linear-gradient(#606c38, #fefae0);
   padding: 20px 0;
+  color: #fefae0;
 }
 
 .jumbotron {
@@ -38,6 +39,11 @@
   color: #606c38;
 }
 
-.navbar-dark {
+.navbar {
   background-color: #fefae0;
+  color: #283618;
+}
+
+link {
+  color: #283618;
 }

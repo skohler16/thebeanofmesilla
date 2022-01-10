@@ -10,7 +10,7 @@ export const LOCATIONS = [
   },
   {
     id: 1,
-    name: "The Bean Cafe at the old gate",
+    name: "The Bean Cafe at Josefina's",
     images: "/assets/images/josefinaOldGate.jpeg",
     features: false,
     description:

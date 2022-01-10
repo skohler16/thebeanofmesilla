@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 
 class Directory extends Component {
-  renderSelectedLocation(location) {
+  onLocationSelect(location) {
     if (location) {
       return (
         <Card>
@@ -45,7 +45,11 @@ class Directory extends Component {
       <div className="container">
         <div className="row">
           {directory}
-          <div className="col"></div>
+          <div className="col">
+            {/* <div className="col-md-5 m-1">
+              {this.render.selectedLocation(this.state.selectedLocation)}
+            </div> */}
+          </div>
         </div>
       </div>
     );
