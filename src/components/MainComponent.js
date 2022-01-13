@@ -3,6 +3,7 @@ import Directory from "./DirectoryComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
+import Contact from "./ContactComponent";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { LOCATIONS } from "../shared/locations";
 
@@ -28,6 +29,7 @@ class Main extends Component {
             path="/directory"
             render={() => <Directory locations={this.state.locations} />}
           />
+          <Route exact path="/contactus" component={Contact} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
