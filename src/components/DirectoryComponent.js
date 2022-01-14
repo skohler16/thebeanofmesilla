@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class Directory extends Component {
   onLocationSelect(location) {
@@ -27,9 +20,13 @@ class Directory extends Component {
         <div key={location.id} className="col mt-5 md-5">
           <Card onClick={() => this.onLocationSelect(location)}>
             <CardImg width="100%" src={location.images} alt={location.name} />
-            <CardImgOverlay>
+            <CardBody>
               <CardTitle>{location.name}</CardTitle>
-            </CardImgOverlay>
+              <CardText>
+                {location.address}
+                <br /> {location.phone}
+              </CardText>
+            </CardBody>
           </Card>
         </div>
       );
