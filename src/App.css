@@ -31,19 +31,39 @@
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #283618, #fefae0);
-  color: white;
+  background-image: linear-gradient(to right, #283618, #fefae0, #283618);
+  color: #fefae0;
 }
-
-.jumbotron h2 {
-  color: #606c38;
+.navbar-dark {
+  background-color: #901cad;
 }
 
 .navbar {
-  background-color: #fefae0;
+  background-image: linear-gradient(to right, #fefae0, #606c38);
   color: #283618;
 }
 
 link {
   color: #283618;
+}
+
+#latte {
+  height: 500px;
+  width: auto;
+}
+#springFling {
+  height: 500px;
+  width: auto;
+}
+#granola {
+  height: auto;
+  width: 500px;
+}
+#owner {
+  height: auto;
+  width: 500px;
+}
+#staff {
+  height: auto;
+  width: 500px;
 }

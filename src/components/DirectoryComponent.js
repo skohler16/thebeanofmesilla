@@ -11,22 +11,16 @@ import {
 class Directory extends Component {
   onLocationSelect(location) {
     if (location) {
-      return (
-        <Card>
-          <CardBody>
-            <CardTitle>{location.name}</CardTitle>
-            <CardText>
-              {location.address}
-              <br />
-              {location.description}
-            </CardText>
-          </CardBody>
-        </Card>
-      );
-    }
-    return <div />;
-  }
+      <Card>
+        <CardBody>
+          <CardTitle>{location.name}</CardTitle>
+          <CardText>{location.address}</CardText>
+        </CardBody>
+      </Card>;
 
+      return <div />;
+    }
+  }
   render() {
     const directory = this.props.locations.map((location) => {
       return (
@@ -46,9 +40,9 @@ class Directory extends Component {
         <div className="row">
           {directory}
           <div className="col">
-            {/* <div className="col-md-5 m-1">
-              {this.render.selectedLocation(this.state.selectedLocation)}
-            </div> */}
+            <div className="col-md-5 m-1">
+              {/* {this.render.selectedLocation(this.state.selectedLocation)} */}
+            </div>
           </div>
         </div>
       </div>
